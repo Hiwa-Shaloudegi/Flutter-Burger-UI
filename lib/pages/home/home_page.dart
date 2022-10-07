@@ -37,44 +37,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        // backgroundColor: Colors.deepPurple,
-        leading: const Icon(Icons.menu_rounded),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 20),
-            child: Icon(Icons.person),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
-        iconSize: 28,
-        selectedIconTheme: const IconThemeData(size: 28, color: Colors.black),
-        // landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_filled,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline_rounded),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.file_open_outlined),
-            label: '',
-          ),
-        ],
-      ),
+      appBar: appBar(),
+      bottomNavigationBar: bottomNavigationBar(),
       body: SingleChildScrollView(
         child: Container(
           // color: Colors.amber,
@@ -94,24 +58,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 32,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  prefixIcon:
-                      Icon(Icons.search_rounded, color: Colors.grey.shade400),
-                  hintText: "Find your burger",
-                  hintStyle: TextStyle(color: Colors.grey.shade400),
-                  fillColor: Colors.grey.shade50,
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                ),
-              ),
+              search(),
               Container(
                 height: 40,
                 margin: const EdgeInsets.symmetric(vertical: 32),
@@ -162,4 +109,80 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+
+
+  // components
+  AppBar appBar() {
+    return AppBar(
+      // backgroundColor: Colors.deepPurple,
+      leading: const Icon(Icons.menu_rounded),
+      actions: const [
+        Padding(
+          padding: EdgeInsets.only(right: 20),
+          child: Icon(Icons.person),
+        ),
+      ],
+    );
+  }
+
+  Widget bottomNavigationBar() {
+    return  BottomNavigationBar(
+      selectedItemColor: Colors.black,
+      unselectedItemColor: Colors.grey,
+      iconSize: 28,
+      selectedIconTheme: const IconThemeData(size: 28, color: Colors.black),
+      // landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
+      type: BottomNavigationBarType.fixed,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.home_filled,
+          ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.shopping_cart_outlined),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite_outline_rounded),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.file_open_outlined),
+          label: '',
+        ),
+      ],
+    );
+  }
+
+  Widget search() {
+    return  TextField(
+      decoration: InputDecoration(
+          prefixIcon:
+          Icon(Icons.search_rounded, color: Colors.grey.shade400),
+          hintText: "Find your burger",
+          hintStyle: TextStyle(color: Colors.grey.shade400),
+          fillColor: Colors.grey.shade50,
+          filled: true,
+          // border: OutlineInputBorder(
+          //   borderSide: BorderSide(color: Colors.orange),
+          //   borderRadius: BorderRadius.circular(14),
+          // ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(14),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.orange),
+            borderRadius: BorderRadius.circular(14),
+
+          )
+      ),
+    );
+  }
+
+
+
 }
