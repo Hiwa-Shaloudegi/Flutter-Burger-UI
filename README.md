@@ -2,15 +2,9 @@
 
 Flutter Burger UI
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![burger- Samsung Galaxy S8](https://user-images.githubusercontent.com/93870340/202119066-577d414f-8123-4245-9d6d-15012f60e0b2.png)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![bu2 - Samsung Galaxy S8 (2)](https://user-images.githubusercontent.com/93870340/202119104-016b6fc2-5e66-44c1-8c37-9d21089cfeb0.png)
